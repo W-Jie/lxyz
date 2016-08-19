@@ -20,7 +20,7 @@ def save_file(_data,_file):
 input_url = input("输入url地址:")
 url = (input_url + "&pageSize=50").replace('startAnswerQuestion','getQuestions')
 
-infile = read_file('data.txt') #从data.txt文件中读取题库
+infile = read_file('data.json') #从data.json文件中读取题库
 
 if infile:
     response = requests.get(url)

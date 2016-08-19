@@ -60,7 +60,7 @@ def collect():
     if result:
         for id in result:
             all_questions += "="*50 + "\n" + result[id]['question'] + "\n\n" + result[id]['answer'] + "\n"
-        save_file_with_json(result,'data.txt')
+        save_file_with_json(result,'data.json')
         save_file(all_questions,'questions.txt')
     else:
         print("Error: 题库采集失败!")
