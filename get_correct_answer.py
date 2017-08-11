@@ -3,7 +3,6 @@
 import requests
 import bs4 
 import time
-import re
 import json
 
 #读取文件
@@ -37,6 +36,6 @@ if infile:
 
     save_file(questions,'get_correct_answer.txt')  #匹配到的题目与答案保存到文件answer.txt
 
-    print("生成答案成功!")
+    print("生成答案成功! 答案已保存到：'get_correct_answer.txt'")
 else:
     print("题库错误!")
