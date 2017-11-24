@@ -32,10 +32,10 @@ def collect():
     result = {} # 爬虫收集结果
     all_questions = '' # 所有题目和答案
     answerHisStartNum = 1  #历史试题，用于收集题库。开始采集试题编号
-    answerCnt = 50  #收集历史试卷数量。如果发现答案有错，需要调整开始值及数量值
+    answerCnt = 100  #收集历史试卷数量。如果发现答案有错，需要调整开始值及数量值
 
     for num in range(answerHisStartNum, answerHisStartNum + answerCnt):
-        url = 'http://ks.gdycjy.gov.cn/kQuestion.shtml?act=getHistory&pageSize=50&kAnswerInfoId=' + str(num) #pageSize=50 一次显示50道题目
+        url = 'https://ks.gdycjy.gov.cn/kQuestion.shtml?act=getHistory&pageSize=50&kAnswerInfoId=' + str(num) #pageSize=50 一次显示50道题目
 
         response = requests.get(url)
         if response.status_code == 200: #判断url是否可访问。url通过iframe嵌套，貌似都是返回200
